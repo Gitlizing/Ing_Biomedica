@@ -13,7 +13,6 @@ return "Sobrepeso";
 }
 return "Obesidad";
 }
-
 int main() {
 double peso, estatura;
 double imc = calcularImc(peso, estatura);
@@ -24,4 +23,8 @@ std::cout << "Estatura (m): ";
 std::cin >> estatura;
 std::cout << "IMC: " << imc << " (" << clasificarImc(imc) << ")" << std::endl;
 return 0;
+
+}
+double librasAKilogramos(double libras){
+return libras * 0.4536;
 }
