@@ -3,6 +3,9 @@
 double calcularImc(double pesoKg, double estaturaM) {
 return pesoKg / (estaturaM * estaturaM);
 }
+double librasAKilogramos(double libras) {
+    return libras * 0.4536;
+}
 std::string clasificarImc(double imc) {
 if (imc < 18.5) {
 return "Bajo peso";
@@ -16,7 +19,6 @@ return "Obesidad";
 int main() {
 double peso, estatura;
 double imc = calcularImc(peso, estatura);
-
 std::cout << "Peso (kg): ";
 std::cin >> peso;
 std::cout << "Estatura (m): ";
@@ -24,7 +26,4 @@ std::cin >> estatura;
 std::cout << "IMC: " << imc << " (" << clasificarImc(imc) << ")" << std::endl;
 return 0;
 
-}
-double librasAKilogramos(double libras){
-return libras * 0.4536;
 }
